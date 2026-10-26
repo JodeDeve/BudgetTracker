@@ -8,9 +8,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner InputScanner = new Scanner(System.in); // The Scanner code named "InputScanner"
+        try (Scanner InputScanner = new Scanner(System.in)) { // The Scanner code named "InputScanner"
 
         // Login Account System Objects Here
+        String SavedUsername;
+        String SavedPassword;
         String Username;
         String Password;
         boolean login = true;
@@ -36,18 +38,45 @@ public class Main {
         int expensesCount = 0;
 
 
-        while (login) {
+        
         System.out.println("Welcome To Budget Tracker");
         System.out.println("Created By: Gile, Jode, Vargas, Adrian, Joerge");
         System.out.println("");
         System.out.println("Create An Account To Get Started.");
+        System.out.println("");
+
+        while (login) {
         System.out.print("Enter Your Username: ");
         Username = InputScanner.nextLine();
-        System.out.println("");
-        System.out.print("Create Your Password: ");
-        Password = InputScanner.nextLine();
+
+        if (Username.equals("johhny sins") ||
+            Username.equals("pisot") ||
+            Username.equals("cum") ||
+            Username.equals("porn") ||
+            Username.equals("sex") ||
+            Username.equals("fuck") ||
+            Username.equals("dick") ||
+            Username.equals("cock") ||
+            Username.equals("pussy") ||
+            Username.equals("ass") ||
+            Username.equals("bitch") ||
+            Username.equals("nigger") ||
+            Username.equals("shit") ||
+            Username.equals("sarap ni jode")) {
+            System.out.println();
+            System.out.println("Invalid username. Please try again.");
+            System.out.println();
+            continue;
         }
 
+        System.out.print("Create Your Password: ");
+        Password = InputScanner.nextLine();
+
+        System.out.println("Welcome " + Username + " You have successfully created an account! ");
+        System.out.println("");
+        login = false;
+
+    }
         System.out.println(" ");
         System.out.println("================================");
         System.out.println("          BUDGET TRACKER        ");
@@ -138,4 +167,5 @@ public class Main {
         }
 
     }
+}
 }
