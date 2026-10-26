@@ -10,6 +10,11 @@ public class Main {
 
         Scanner InputScanner = new Scanner(System.in); // The Scanner code named "InputScanner"
 
+        // Login Account System Objects Here
+        String Username;
+        String Password;
+        boolean login = true;
+
         // Variable area po dito
         boolean Choicemenu = true;
         boolean SetTrigger = false;
@@ -29,6 +34,19 @@ public class Main {
         int expenses[] = new int[100]; // These two Arrays are for the expenses 
         String description[] = new String[100];
         int expensesCount = 0;
+
+
+        while (login) {
+        System.out.println("Welcome To Budget Tracker");
+        System.out.println("Created By: Gile, Jode, Vargas, Adrian, Joerge");
+        System.out.println("");
+        System.out.println("Create An Account To Get Started.");
+        System.out.print("Enter Your Username: ");
+        Username = InputScanner.nextLine();
+        System.out.println("");
+        System.out.print("Create Your Password: ");
+        Password = InputScanner.nextLine();
+        }
 
         System.out.println(" ");
         System.out.println("================================");
