@@ -11,11 +11,11 @@ public class Main {
         try (Scanner InputScanner = new Scanner(System.in)) { // The Scanner code named "InputScanner"
 
         // Login Account System Objects Here
-        String SavedUsername;
-        String SavedPassword;
-        String Username;
-        String Password;
-        boolean login = true;
+        String SavedUsername; // Wala pa ako na isip kung pano ko i-save yung username and password, pero sa ngayon, eto muna
+        String SavedPassword; 
+        String Username; // Variable for the entered username
+        String Password; // Variable for the entered password
+        boolean login = true; // Variable for the login system
 
         // Variable area po dito
         boolean Choicemenu = true;
@@ -39,18 +39,18 @@ public class Main {
 
 
         
-        System.out.println("Welcome To Budget Tracker");
+        System.out.println("Welcome To Budget Tracker"); // Pagandahin mo nga eto juddy na welcome screen na bored ako mag design
         System.out.println("Created By: Gile, Jode, Vargas, Adrian, Joerge");
         System.out.println("");
         System.out.println("Create An Account To Get Started.");
         System.out.println("");
 
-        while (login) {
+        while (login) { // While loop for the login system
         System.out.print("Enter Your Username: ");
         Username = InputScanner.nextLine();
 
-        if (Username.equals("johhny sins") ||
-            Username.equals("pisot") ||
+        if (Username.equals("johhny sins") || // If staement for checking if the username values matches any of the invalid usernames
+            Username.equals("pisot") || // Or operator for checking multiple values
             Username.equals("cum") ||
             Username.equals("porn") ||
             Username.equals("sex") ||
@@ -66,7 +66,7 @@ public class Main {
             System.out.println();
             System.out.println("Invalid username. Please try again.");
             System.out.println();
-            continue;
+            continue; // For returning to the start of the loop
         }
 
         System.out.print("Create Your Password: ");
