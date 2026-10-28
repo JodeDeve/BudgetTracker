@@ -67,7 +67,14 @@ public class Main {
             System.out.println("Invalid username. Please try again.");
             System.out.println();
             continue; // For returning to the start of the loop
-        }
+
+        } else if (Username.equalsIgnoreCase("pogi ni sir dhan") ||
+            (Username.equalsIgnoreCase("sir dhan pogi")) ||
+            (Username.equalsIgnoreCase("sarap ni sir dhan"))) {
+                System.out.println("");
+                System.out.println("Pogi Talaga ni Sir noh?");
+                System.out.println("");
+            }
 
         System.out.print("Create Your Password: ");
         Password = InputScanner.nextLine();
