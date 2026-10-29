@@ -37,8 +37,6 @@ public class Main {
         String description[] = new String[100];
         int expensesCount = 0;
 
-
-        
         System.out.println("Welcome To Budget Tracker"); // Pagandahin mo nga eto juddy na welcome screen na bored ako mag design
         System.out.println("Created By: Gile, Jode, Vargas, Adrian, Joerge");
         System.out.println("");
@@ -133,6 +131,7 @@ public class Main {
 
                         break;
                     case 3:
+                        while (true) {
                         System.out.print("How Many Expenses Would You Want? The limit is only 100: ");
                         int amount = InputScanner.nextInt(); // Stores the amount of times the the loop will run
                         InputScanner.nextLine();
@@ -141,17 +140,21 @@ public class Main {
 
                             for (int i = 0; i < amount; i++) {  // Repeat the loop based on how many expenses the user wants
                                 System.out.print("Enter Expenses Description: "); // Ask for the expense description and save it in the next available slot in the array
+                                System.out.print("");
                                 description[expensesCount] = InputScanner.nextLine();
+                        
 
                                 System.out.print("Enter The Amount of Expenses: "); // Ask for the expense amount and save it in the same slot in the array
+                                System.out.print("");
                                 expenses[expensesCount] = InputScanner.nextInt();
                                 InputScanner.nextLine();
                                 expensesCount++;  // Increase the count so the next expense uses the next slot
+                                break;
                             }
                         } else {
                             System.out.println("Invalid Amount or not enough Space. Pls Try again ");
                         }
-                        break;
+                        }
                     case 4:
                         System.out.println("You're current Budget is " + Budget);
                         for (int lists : incomeList) {
@@ -160,9 +163,9 @@ public class Main {
                         break; // Placeholders. Input nalang kayo code wala pa ako na isip na structure
                     case 5:
                         break;
-                    case 6:
-                        break;
-
+                    default:
+                        System.out.println("");
+                        System.out.println("Invalid Input. Pls Try Again");
                 }
 
             } else {
