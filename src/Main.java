@@ -149,8 +149,8 @@ public class Main {
                                 expenses[expensesCount] = InputScanner.nextInt();
                                 InputScanner.nextLine();
                                 expensesCount++;  // Increase the count so the next expense uses the next slot
-                                break;
                             }
+                            break;
                         } else {
                             System.out.println("Invalid Amount or not enough Space. Pls Try again ");
                         }
